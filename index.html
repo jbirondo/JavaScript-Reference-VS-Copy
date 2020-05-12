@@ -65,7 +65,21 @@
     // We will hopefully soon see the object ...spread
     const cap3 = {...person}
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+    const se = {
+      name: 'dave',
+      age: 50,
+      social: {
+        twitter: '@dave',
+        facebook: 'davedave'
+      }
+    }
 
+    console.clear()
+    console.log(se)
+
+    const dev = Object.assign({}, se)
+    // poor man's deep clone
+    const dev2 = JSON.parse(JSON.stringify(se))
   </script>
 
 </body>
